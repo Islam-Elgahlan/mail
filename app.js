@@ -20,13 +20,13 @@ app.use((req,res,next)=>{
 // });
 
 
-let transporter = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: "islam.elgahlan@gmail.com",
-    pass: "dkjsysvxeedpvhrj",
-  },
-});
+// let transporter = nodemailer.createTransport({
+//   service: "gmail",
+//   auth: {
+//     user: "islam.elgahlan@gmail.com",
+//     pass: "dkjsysvxeedpvhrj",
+//   },
+// });
 
 // app.post("/", async (req, res) => {
 //   let {name, email,  phone, message } = req.body;
@@ -43,8 +43,8 @@ let transporter = nodemailer.createTransport({
   
 //   // console.log(res)
 // });
-app.post("/a" ,  (req,res) => {
-console.log(req.body)
+app.get("/a" ,  (req,res) => {
+// console.log(req.body)
 res.json({message:"sucess"})
 })
 
