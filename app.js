@@ -28,24 +28,24 @@ let transporter = nodemailer.createTransport({
   },
 });
 
-app.post("/", async (req, res) => {
-  let {name, email,  phone, message } = req.body;
-  let info = await transporter.sendMail({
-    from: "islam.elgahlan@gmail.com",
-    to: "mmodern2008@gmail.com",
-    subject: "follow up mail ",
-    html: ` <h1>Kindly Follow up with Mr: ${name} </h1>
-    <p>name:  ${name} </p><p>email:  ${email} </p><p>phone:  ${phone} </p><p>Customer Message:  ${message} </p>
-    `,
-  });
-  res.json({message:"sent"})
-  // res.send(name);
+// app.post("/", async (req, res) => {
+//   let {name, email,  phone, message } = req.body;
+//   let info = await transporter.sendMail({
+//     from: "islam.elgahlan@gmail.com",
+//     to: "mmodern2008@gmail.com",
+//     subject: "follow up mail ",
+//     html: ` <h1>Kindly Follow up with Mr: ${name} </h1>
+//     <p>name:  ${name} </p><p>email:  ${email} </p><p>phone:  ${phone} </p><p>Customer Message:  ${message} </p>
+//     `,
+//   });
+//   res.json({message:"sent"})
+//   // res.send(name);
   
-  // console.log(res)
-});
-// app.post("/a" ,  (req,res) => {
-// console.log(req.body)
-// res.json({message:"sucess"})
-// })
+//   // console.log(res)
+// });
+app.post("/a" ,  (req,res) => {
+console.log(req.body)
+res.json({message:"sucess"})
+})
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
